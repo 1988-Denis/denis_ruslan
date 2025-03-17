@@ -3,6 +3,5 @@
 
 .DS_Store
 .vscode
-.idea
 .npmrc
 .env
