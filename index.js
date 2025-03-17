@@ -11,38 +11,52 @@
 //     console.log('FizzBuzz');
 // }
 
-const alex = {
-    name: 'Alex',
-    dateOfBirth: new Date('2024-05-15'),
-};
+// const alex = {
+//     name: 'Alex',
+//     dateOfBirth: new Date('2024-05-15'),
+// };
+//
+// const jake = {
+//     name: 'Jake',
+//     dateOfBirth: new Date('1970-01-01T00:00:00.000Z'),
+// };
+//
+// const john = {
+//     name: 'John',
+//     dateOfBirth: new Date('2007-12-30T11:32:59.953+03:00'),
+// };
+//
+// const bob = {
+//     name: 'Bob',
+//     dateOfBirth: new Date(),
+// };
+// const millisecondsInYear = 365 * 24 * 60 * 60 * 1000; // Или сразу просто 31536000000. Кол-во миллисекунд в году.
+//
+// // Текущая дата
+// const now = new Date();
+//
+// // Делим "сколько прошло миллисекунд с момента рождения" на количество миллисекунд в годе, тем самым находим
+// // сколько прошло лет с момента рождения. И округляем вниз, чтобы получить "полных лет"
+// alex.age = Math.floor((now.getTime() - alex.dateOfBirth.getTime()) / millisecondsInYear);
+// jake.age = Math.floor((now.getTime() - jake.dateOfBirth.getTime()) / millisecondsInYear);
+// john.age = Math.floor((now.getTime() - john.dateOfBirth.getTime()) / millisecondsInYear);
+// bob.age = Math.floor((now.getTime() - bob.dateOfBirth.getTime()) / millisecondsInYear);
+//
+// console.log(alex);
+// console.log(jake);
+// console.log(john);
+// console.log(bob);
 
-const jake = {
-    name: 'Jake',
-    dateOfBirth: new Date('1970-01-01T00:00:00.000Z'),
-};
-
-const john = {
-    name: 'John',
-    dateOfBirth: new Date('2007-12-30T11:32:59.953+03:00'),
-};
-
-const bob = {
-    name: 'Bob',
-    dateOfBirth: new Date(),
-};
-const millisecondsInYear = 365 * 24 * 60 * 60 * 1000; // Или сразу просто 31536000000. Кол-во миллисекунд в году.
-
-// Текущая дата
-const now = new Date();
-
-// Делим "сколько прошло миллисекунд с момента рождения" на количество миллисекунд в годе, тем самым находим
-// сколько прошло лет с момента рождения. И округляем вниз, чтобы получить "полных лет"
-alex.age = Math.floor((now.getTime() - alex.dateOfBirth.getTime()) / millisecondsInYear);
-jake.age = Math.floor((now.getTime() - jake.dateOfBirth.getTime()) / millisecondsInYear);
-john.age = Math.floor((now.getTime() - john.dateOfBirth.getTime()) / millisecondsInYear);
-bob.age = Math.floor((now.getTime() - bob.dateOfBirth.getTime()) / millisecondsInYear);
-
-console.log(alex);
-console.log(jake);
-console.log(john);
-console.log(bob);
+const year = Math.floor(Math.random() * ((2120 - 1980) / 10 + 1)) * 10 + 1980;
+let vusYear = false;
+if (year % 4 === 0) {
+    if (year % 100 === 0) {
+        if (year % 400 === 0) {
+            vusYear = true;
+        }
+    } else {
+        vusYear = true;
+    }
+}
+console.log (year);
+console.log(vusYear ? "Это високосный год." : "Это не високосный год.");
