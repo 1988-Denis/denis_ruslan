@@ -106,3 +106,40 @@
 // console.log(m[0][0][0][0]);
 // console.log(m[1]);
 // console.log(m[0][1]);
+//
+// let count = 0;
+//
+// while (true) {
+//     let chislo1 = Math.floor(Math.random() * 6) + 1;
+//     let chislo2 = Math.floor(Math.random() * 6) + 1;
+//     count++;
+//     console.log(`Попытка № ${count}, число ${chislo1}, число ${chislo2}`);
+//     if (chislo1 === chislo2) {
+//         break;
+//     }
+// }
+// console.log(`Дубль выпал на попытке ${count}`);
+
+
+const players = ['Alexey', 'Bob', 'Charlie', 'Dong', 'Emaar', 'Fox', 'Ginger', 'Hato']; // создаем массив
+
+const variants = ['Орёл', 'Решка']; // создаем массив
+
+const winners = [];// создаем пусстой массив
+const losers = []; // создаем пусстой массив
+
+while (players.length) {
+    const player = players.pop();// удаляем последний элемент массива players
+    const playerChoose = variants[Math.floor(Math.random() * variants.length)];// создаем рандомное целое число, чтобы выбрать элемент из массива variants
+
+    const gameRandom = variants[Math.floor(Math.random() * variants.length)]; // создаем рандомное целое число, чтобы выбрать элемент из массива variants
+
+    if (playerChoose === gameRandom) { // сравниваем два элемент из массива variants
+        winners.push(player);// если условие выполняется, то добавляем элемeнт массива players в конец массива winners
+    } else {
+        losers.push(player); // если не условие выполняется, то добавляем элемент массива players в конец массива losers
+    }
+}
+
+console.log(winners);
+console.log(losers);
