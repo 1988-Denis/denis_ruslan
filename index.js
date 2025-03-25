@@ -120,26 +120,59 @@
 // }
 // console.log(`Дубль выпал на попытке ${count}`);
 
+//
+// const players = ['Alexey', 'Bob', 'Charlie', 'Dong', 'Emaar', 'Fox', 'Ginger', 'Hato']; // создаем массив
+//
+// const variants = ['Орёл', 'Решка']; // создаем массив
+//
+// const winners = [];// создаем пусстой массив
+// const losers = []; // создаем пусстой массив
+//
+// while (players.length) {
+//     const player = players.pop();// удаляем последний элемент массива players
+//     const playerChoose = variants[Math.floor(Math.random() * variants.length)];// создаем рандомное целое число, чтобы выбрать элемент из массива variants
+//
+//     const gameRandom = variants[Math.floor(Math.random() * variants.length)]; // создаем рандомное целое число, чтобы выбрать элемент из массива variants
+//
+//     if (playerChoose === gameRandom) { // сравниваем два элемент из массива variants
+//         winners.push(player);// если условие выполняется, то добавляем элемeнт массива players в конец массива winners
+//     } else {
+//         losers.push(player); // если не условие выполняется, то добавляем элемент массива players в конец массива losers
+//     }
+// }
+//
+// console.log(winners);
+// console.log(losers);
 
-const players = ['Alexey', 'Bob', 'Charlie', 'Dong', 'Emaar', 'Fox', 'Ginger', 'Hato']; // создаем массив
+// const numbers = [1, 22, -2, 3, -4, -65, 5, -6];
+// let positiveCount = 0;
+// let negativeCount = 0;
+//
+// for (let i = 0; i < numbers.length; i++) {
+//        if (i === numbers.length - 2) {
+//         continue;
+//     }
+//     if (numbers[i] > 0) {
+//         positiveCount++;
+//     } else if (numbers[i] < 0) {
+//         negativeCount++;
+//     }
+// }
+// console.log(`Положительных чисел: ${positiveCount}`);
+// console.log(`Отрицательных чисел: ${negativeCount}`);
 
-const variants = ['Орёл', 'Решка']; // создаем массив
-
-const winners = [];// создаем пусстой массив
-const losers = []; // создаем пусстой массив
-
-while (players.length) {
-    const player = players.pop();// удаляем последний элемент массива players
-    const playerChoose = variants[Math.floor(Math.random() * variants.length)];// создаем рандомное целое число, чтобы выбрать элемент из массива variants
-
-    const gameRandom = variants[Math.floor(Math.random() * variants.length)]; // создаем рандомное целое число, чтобы выбрать элемент из массива variants
-
-    if (playerChoose === gameRandom) { // сравниваем два элемент из массива variants
-        winners.push(player);// если условие выполняется, то добавляем элемeнт массива players в конец массива winners
-    } else {
-        losers.push(player); // если не условие выполняется, то добавляем элемент массива players в конец массива losers
-    }
-}
-
-console.log(winners);
-console.log(losers);
+// const numbers = [1.1 , 2.2, -2, 3.3, -1, 5.5, 5.99, 7.49, 7.9999, -2.2];
+// const plusIndex = [];
+// for (let i = 0; i < numbers.length; i++) {
+//     if (numbers [i]) {
+//         plusIndex.push(i);
+//     }
+// }
+// const endIndex = Math.max(0,plusIndex.length -4);
+// // console.log(plusIndex);
+//
+// for (let i=0; i < endIndex; i++) {
+//     const index = plusIndex[i];
+//     numbers[index] = Math.round(numbers[index]);
+// }
+// console.log(numbers);
