@@ -176,3 +176,36 @@
 //     numbers[index] = Math.round(numbers[index]);
 // }
 // console.log(numbers);
+
+// const num = [3,5,7,9,0,1,2,4,5];
+// const numIndex = Math.floor(num.length / 2);
+// // console.log(numIndex);
+// for (let i = numIndex; i < num.length; i++) {
+//     console.log(num[i]);
+// }
+
+// Ёлочка
+// const height = 5;
+//
+// for (let i = 0; i < height; i++) {
+//     let stars = ' *'.repeat(height+i-4);
+//
+//     console.log(stars);
+// }
+
+const matrix = [
+    ['Id', 'Title', 'Description'],
+    [1, 'Title-1', 'Description-1'],
+    [2, 'Title-2', 'Description-2'],
+    [3, 'Title-3', 'Description-3', 'Поле с багом'],
+    [4, 'Title-4', 'Description-4'],
+    [5, 'Title-5', 'Description-5'],
+    [6, 'Title-6', 'Description-6', 'Поле с багом'],
+];
+const rezult = matrix.filter(item => item !== ',');
+// console.log(rezult);
+for (let i = 0; i < rezult.length; i++) {
+    let row = rezult[i] +' \t';
+    console.log(row);
+
+}
