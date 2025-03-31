@@ -209,23 +209,41 @@
 //     console.log(row);
 //
 // }
+//
+// const numbers = [9,-3546,5786774,34555,-1567,423];
+// let min = numbers[0];
+// let max = numbers[0];
+// let srsum = 0;
+//
+// for (const number of numbers) {
+//     if (number < min) {
+//         min = number;
+//     }
+//     if (number > max) {
+//         max = number;
+//     }
+//     srsum += number;
+// }
+// const average = srsum / numbers.length;
+//
+// console.log(`Минимальное число: ${min}`);
+// console.log(`Максимальное число: ${max}`);
+// console.log(`Среднее число: ${average}`);
 
-const numbers = [9,-3546,5786774,34555,-1567,423];
-let min = numbers[0];
-let max = numbers[0];
-let srsum = 0;
 
-for (const number of numbers) {
-    if (number < min) {
-        min = number;
+const vowels = ["а", "у", "о", "ы", "и", "э", "я", "ю", "ё", "е"];
+const vowels2 = vowels.join("");
+let glassn = 0;
+let neglasn = 0;
+
+for (const letter of vowels2) {
+    if (vowels2.includes(letter)) {
+        glassn++;
+    }else if (/[а-яё]/.test(letter)){
+        neglasn++;
+
     }
-    if (number > max) {
-        max = number;
-    }
-    srsum += number;
+
 }
-const average = srsum / numbers.length;
-
-console.log(`Минимальное число: ${min}`);
-console.log(`Максимальное число: ${max}`);
-console.log(`Среднее число: ${average}`);
+console.log(glassn);
+console.log(neglasn);
