@@ -193,19 +193,39 @@
 //     console.log(stars);
 // }
 
-const matrix = [
-    ['Id', 'Title', 'Description'],
-    [1, 'Title-1', 'Description-1'],
-    [2, 'Title-2', 'Description-2'],
-    [3, 'Title-3', 'Description-3', 'Поле с багом'],
-    [4, 'Title-4', 'Description-4'],
-    [5, 'Title-5', 'Description-5'],
-    [6, 'Title-6', 'Description-6', 'Поле с багом'],
-];
-const rezult = matrix.filter(item => item !== ',');
-// console.log(rezult);
-for (let i = 0; i < rezult.length; i++) {
-    let row = rezult[i] +' \t';
-    console.log(row);
+// const matrix = [
+//     ['Id', 'Title', 'Description'],
+//     [1, 'Title-1', 'Description-1'],
+//     [2, 'Title-2', 'Description-2'],
+//     [3, 'Title-3', 'Description-3', 'Поле с багом'],
+//     [4, 'Title-4', 'Description-4'],
+//     [5, 'Title-5', 'Description-5'],
+//     [6, 'Title-6', 'Description-6', 'Поле с багом'],
+// ];
+// const rezult = matrix.filter(item => item !== ',');
+// // console.log(rezult);
+// for (let i = 0; i < rezult.length; i++) {
+//     let row = rezult[i] +' \t';
+//     console.log(row);
+//
+// }
 
+const numbers = [9,-3546,5786774,34555,-1567,423];
+let min = numbers[0];
+let max = numbers[0];
+let srsum = 0;
+
+for (const number of numbers) {
+    if (number < min) {
+        min = number;
+    }
+    if (number > max) {
+        max = number;
+    }
+    srsum += number;
 }
+const average = srsum / numbers.length;
+
+console.log(`Минимальное число: ${min}`);
+console.log(`Максимальное число: ${max}`);
+console.log(`Среднее число: ${average}`);
