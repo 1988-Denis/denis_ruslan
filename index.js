@@ -246,16 +246,16 @@
 //
 // }
 // console.log(glassn);
-// console.log(neglasn);
-
-// Сравнение массивов
-
-const names1 = ['Ivan', 'Kovan'];
-const names2 = ['Kovan', 'Ivan'];
-// // true, так как значения "одинаковые"
+// // console.log(neglasn);
 //
-// let itog = true;
+// // Сравнение массивов
 //
+// const names1 = ['Ivan', 'Kovan'];
+// const names2 = ['Kovan', 'Ivan'];
+// // // true, так как значения "одинаковые"
+// //
+// // let itog = true;
+// //
 // if (names1.length !== names2.length) {
 //     itog = false;
 // } else {
@@ -348,24 +348,51 @@ const names2 = ['Kovan', 'Ivan'];
 //
 //     }
 // }
-// console.log(itog5);
+// // console.log(itog5);
+//
+//
+// const names11 = ['0'];
+// const names12 = [0];
+// // false
+//
+// let itog6 = true;
+//
+// if (names11.length !== names12.length) {
+//     itog6 = false;
+// } else {
+//     for (const item1    of names12) {
+//         if (!names11.includes(item1)) {
+//             itog6 = false;
+//             break
+//         }
+//
+//     }
+// }
+// console.log(itog6);
 
+const users = [
+    { name: 'Alice', age: 25 },
+    { name: 'Bob', age: 30 },
+    { name: 'Charlie', age: 25 },
+    { name: 'Diana', age: 35 },
+    { name: 'Eve', age: 30 },
+    { name: 'Frank', age: 28 },
+    { name: 'Grace', age: 25 },
+    { name: 'Hannah', age: 41 },
+    { name: 'Ivy', age: 30 },
+    { name: 'Jack', age: 28 },
+];
 
-const names11 = ['0'];
-const names12 = [0];
-// false
+const counter = {};
+for (const user  of users) {
+    if (counter[user.age]) {
+        counter[user.age]++;
 
-let itog6 = true;
-
-if (names11.length !== names12.length) {
-    itog6 = false;
-} else {
-    for (const item1    of names12) {
-        if (!names11.includes(item1)) {
-            itog6 = false;
-            break
-        }
-
+    } else {
+        counter[user.age] = 1;
     }
+
 }
-console.log(itog6);
+for (const age in counter) {
+    console.log (`Возраст = ${age}. 'Количество людей = ${counter[age]}`);
+}
