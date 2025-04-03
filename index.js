@@ -231,19 +231,141 @@
 // console.log(`Среднее число: ${average}`);
 
 
-const vowels = ["а", "у", "о", "ы", "и", "э", "я", "ю", "ё", "е"];
-const vowels2 = vowels.join("");
-let glassn = 0;
-let neglasn = 0;
+// const vowels = ["а", "у", "о", "ы", "и", "э", "я", "ю", "ё", "е"];
+// const vowels2 = vowels.join("");
+// let glassn = 0;
+// let neglasn = 0;
+//
+// for (const letter of vowels2) {
+//     if (vowels2.includes(letter)) {
+//         glassn++;
+//     }else if (/[а-яё]/.test(letter)){
+//         neglasn++;
+//
+//     }
+//
+// }
+// console.log(glassn);
+// console.log(neglasn);
 
-for (const letter of vowels2) {
-    if (vowels2.includes(letter)) {
-        glassn++;
-    }else if (/[а-яё]/.test(letter)){
-        neglasn++;
+// Сравнение массивов
+
+const names1 = ['Ivan', 'Kovan'];
+const names2 = ['Kovan', 'Ivan'];
+// // true, так как значения "одинаковые"
+//
+// let itog = true;
+//
+// if (names1.length !== names2.length) {
+//     itog = false;
+// } else {
+//     for (const item1    of names1) {
+//         if (!names2.includes(item1)) {
+//             itog = false;
+//             break
+//         }
+//
+//     }
+// }
+// console.log(itog);
+
+// const names3 = ['A'];
+// const names4 = ['A', 'B'];
+// // false, так как элемент B есть в names4, но нет в names3
+// let itog2 = true;
+//
+// if (names3.length !== names4.length) {
+//     itog2 = false;
+// } else {
+//     for (const item1    of names3) {
+//         if (!names4.includes(item1)) {
+//             itog2 = false;
+//             break
+//         }
+//
+//     }
+// }
+// console.log(itog2);
+
+
+// const names5 = ['C', 1, false];
+// const names6 = [false, 1, 'C'];
+// // true, так как одни и те же элементы
+//
+// // false, так как элемент B есть в names4, но нет в names3
+// let itog3 = true;
+//
+// if (names5.length !== names6.length) {
+//     itog3 = false;
+// } else {
+//     for (const item1    of names6) {
+//         if (!names5.includes(item1)) {
+//             itog3 = false;
+//             break
+//         }
+//
+//     }
+// }
+// console.log(itog3);
+
+
+// const names7 = [null, 0, 'D'];
+// const names8 = ['D', null];
+// // // false, в names7 есть 0, но нет в names8
+// //
+// let itog4 = true;
+//
+// if (names7.length !== names8.length) {
+//     itog4 = false;
+// } else {
+//     for (const item1    of names8) {
+//         if (!names7.includes(item1)) {
+//             itog4 = false;
+//             break
+//         }
+//
+//     }
+// }
+// console.log(itog4);
+
+
+
+// const names9 = [];
+// const names10 = [];
+// // // true, оба массива пустые
+// //
+//
+// let itog5 = true;
+//
+// if (names9.length !== names10.length) {
+//     itog5 = false;
+// } else {
+//     for (const item1    of names10) {
+//         if (!names9.includes(item1)) {
+//             itog5 = false;
+//             break
+//         }
+//
+//     }
+// }
+// console.log(itog5);
+
+
+const names11 = ['0'];
+const names12 = [0];
+// false
+
+let itog6 = true;
+
+if (names11.length !== names12.length) {
+    itog6 = false;
+} else {
+    for (const item1    of names12) {
+        if (!names11.includes(item1)) {
+            itog6 = false;
+            break
+        }
 
     }
-
 }
-console.log(glassn);
-console.log(neglasn);
+console.log(itog6);

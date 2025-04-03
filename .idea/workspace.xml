@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Добавлено задание Мин, макс, среднее">
+    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Добавлено задание Гласные буквы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
@@ -57,7 +57,8 @@
       <updated>1742137334695</updated>
       <workItem from="1742137335575" duration="44979000" />
       <workItem from="1743185795574" duration="1001000" />
-      <workItem from="1743441361512" duration="4226000" />
+      <workItem from="1743441361512" duration="5053000" />
+      <workItem from="1743605220190" duration="3064000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлено задание Елочка и Вывод матрицы">
       <option name="closed" value="true" />
@@ -75,7 +76,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743442970045</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавлено задание Гласные буквы">
+      <option name="closed" value="true" />
+      <created>1743445704153</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743445704153</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +104,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавлено задание Елочка и Вывод матрицы" />
     <MESSAGE value="Добавлено задание Мин, макс, среднее" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено задание Мин, макс, среднее" />
+    <MESSAGE value="Добавлено задание Гласные буквы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено задание Гласные буквы" />
   </component>
 </project>
