@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Добавлено задание Сравнение массивов">
+    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Добавлено задание Возраст">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
@@ -58,7 +58,8 @@
       <workItem from="1742137335575" duration="44979000" />
       <workItem from="1743185795574" duration="1001000" />
       <workItem from="1743441361512" duration="5053000" />
-      <workItem from="1743605220190" duration="4461000" />
+      <workItem from="1743605220190" duration="4706000" />
+      <workItem from="1743786113150" duration="967000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлено задание Елочка и Вывод матрицы">
       <option name="closed" value="true" />
@@ -92,7 +93,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743704146379</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавлено задание Возраст">
+      <option name="closed" value="true" />
+      <created>1743705540181</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743705540181</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +123,7 @@
     <MESSAGE value="Добавлено задание Мин, макс, среднее" />
     <MESSAGE value="Добавлено задание Гласные буквы" />
     <MESSAGE value="Добавлено задание Сравнение массивов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено задание Сравнение массивов" />
+    <MESSAGE value="Добавлено задание Возраст" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено задание Возраст" />
   </component>
 </project>

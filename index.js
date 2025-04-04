@@ -369,30 +369,75 @@
 //     }
 // }
 // console.log(itog6);
+//
+// const users = [
+//     { name: 'Alice', age: 25 },
+//     { name: 'Bob', age: 30 },
+//     { name: 'Charlie', age: 25 },
+//     { name: 'Diana', age: 35 },
+//     { name: 'Eve', age: 30 },
+//     { name: 'Frank', age: 28 },
+//     { name: 'Grace', age: 25 },
+//     { name: 'Hannah', age: 41 },
+//     { name: 'Ivy', age: 30 },
+//     { name: 'Jack', age: 28 },
+// ];
+//
+// const counter = {};
+// for (const user  of users) {
+//     if (counter[user.age]) {
+//         counter[user.age]++;
+//
+//     } else {
+//         counter[user.age] = 1;
+//     }
+//
+// }
+// for (const age in counter) {
+//     console.log (`Возраст = ${age}. 'Количество людей = ${counter[age]}`);
+// }
 
-const users = [
-    { name: 'Alice', age: 25 },
-    { name: 'Bob', age: 30 },
-    { name: 'Charlie', age: 25 },
-    { name: 'Diana', age: 35 },
-    { name: 'Eve', age: 30 },
-    { name: 'Frank', age: 28 },
-    { name: 'Grace', age: 25 },
-    { name: 'Hannah', age: 41 },
-    { name: 'Ivy', age: 30 },
-    { name: 'Jack', age: 28 },
-];
 
-const counter = {};
-for (const user  of users) {
-    if (counter[user.age]) {
-        counter[user.age]++;
+const mary = {
+    name: 'Mary',
+    wantApples: 2,
+};
 
+const alex = {
+    name: 'Alex',
+    wantApples: 1,
+};
+
+const mike = {
+    name: 'Mike',
+    wantApples: 5,
+};
+
+const brown = {
+    name: 'Brown',
+    wantApples: 4,
+};
+
+const people = [mary, alex, mike, brown];
+const apples = 11;
+
+const applesPerPerson = Math.floor(apples / people.length);
+
+
+const happyPeople = [];
+const unhappyPeople = [];
+
+for (const person of people) {
+
+    person.eaten = applesPerPerson;
+    person.isHappy = person.eaten >= person.wantApples;
+
+    if (person.isHappy) {
+        happyPeople.push(person);
     } else {
-        counter[user.age] = 1;
+        unhappyPeople.push(person);
     }
+}
 
-}
-for (const age in counter) {
-    console.log (`Возраст = ${age}. 'Количество людей = ${counter[age]}`);
-}
+console.log('Happy people:', happyPeople);
+console.log('Unhappy people:', unhappyPeople);
