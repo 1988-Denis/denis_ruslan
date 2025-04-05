@@ -432,91 +432,102 @@
 //     person.eaten = applesPerPerson;
 //     person.isHappy = person.eaten >= person.wantApples;
 //
-//     if (person.isHappy) {
-//         happyPeople.push(person);
-//     } else {
-//         unhappyPeople.push(person);
+// //     if (person.isHappy) {
+// //         happyPeople.push(person);
+// //     } else {
+// //         unhappyPeople.push(person);
+// //     }
+// // }
+// //
+// // console.log('Happy people:', happyPeople);
+// // console.log('Unhappy people:', unhappyPeople);
+//
+//
+// const alice = {
+//     name: 'Alice',
+//     age: 10,
+//     illness: null,
+//     driverLicenses: ['B'],
+// };
+//
+// const bob = {
+//     name: 'Bob',
+//     age: 18,
+//     illness: 'Cold',
+//     driverLicenses: ['B'],
+// };
+//
+// const charlie = {
+//     name: 'Charlie',
+//     age: 17,
+//     illness: null,
+//     driverLicenses: ['C', 'E'],
+// };
+//
+// const diana = {
+//     name: 'Diana',
+//     age: 22,
+//     illness: 'H. Disease',
+//     driverLicenses: ['A', 'C', 'D'],
+// };
+//
+// const eve = {
+//     name: 'Eve',
+//     age: 35,
+//     illness: null,
+//     driverLicenses: ['A', 'B', 'E'],
+// };
+//
+// const frank = {
+//     name: 'Frank',
+//     age: 37,
+//     illness: null,
+//     driverLicenses: [],
+// };
+//
+// const gorge = {
+//     name: 'Gorge',
+//     age: 28,
+//     illness: null,
+//     driverLicenses: ['B', 'D'],
+// };
+//
+// const persons = [alice, bob, charlie, diana, eve, frank, gorge];
+//
+// const invalidPersons = [];
+// const validPersons = [];
+//
+// for (const person of persons) {
+//     const { age, illness, driverLicenses } = person;
+//
+//     if (age < 18) {
+//     person.reason = 'Молодой';
+//     invalidPersons.push(person);
+//     continue;
 //     }
+//     if (illness) {
+//     person.reason = 'Болен';
+//     invalidPersons.push(person);
+//     continue;
+//     }
+//     if (driverLicenses.includes('В')) {
+//         person.reason = 'Нет прав';
+//         invalidPersons.push(person);
+//         continue;
+//     }
+//     validPersons.push(person);
 // }
 //
-// console.log('Happy people:', happyPeople);
-// console.log('Unhappy people:', unhappyPeople);
+// console.log('Для трюка подходят:', validPersons);
+// console.log('\nДля трюка НЕ подходят:', invalidPersons);
 
 
-const alice = {
-    name: 'Alice',
-    age: 10,
-    illness: null,
-    driverLicenses: ['B'],
-};
-
-const bob = {
-    name: 'Bob',
-    age: 18,
-    illness: 'Cold',
-    driverLicenses: ['B'],
-};
-
-const charlie = {
-    name: 'Charlie',
-    age: 17,
-    illness: null,
-    driverLicenses: ['C', 'E'],
-};
-
-const diana = {
-    name: 'Diana',
-    age: 22,
-    illness: 'H. Disease',
-    driverLicenses: ['A', 'C', 'D'],
-};
-
-const eve = {
-    name: 'Eve',
-    age: 35,
-    illness: null,
-    driverLicenses: ['A', 'B', 'E'],
-};
-
-const frank = {
-    name: 'Frank',
-    age: 37,
-    illness: null,
-    driverLicenses: [],
-};
-
-const gorge = {
-    name: 'Gorge',
-    age: 28,
-    illness: null,
-    driverLicenses: ['B', 'D'],
-};
-
-const persons = [alice, bob, charlie, diana, eve, frank, gorge];
-
-const invalidPersons = [];
-const validPersons = [];
-
-for (const person of persons) {
-    const { age, illness, driverLicenses } = person;
-
-    if (age < 18) {
-    person.reason = 'Молодой';
-    invalidPersons.push(person);
-    continue;
-    }
-    if (illness) {
-    person.reason = 'Болен';
-    invalidPersons.push(person);
-    continue;
-    }
-    if (driverLicenses.includes('В')) {
-        person.reason = 'Нет прав';
-        invalidPersons.push(person);
-        continue;
-    }
-    validPersons.push(person);
+const person = { age: 10, name: '', child: 'Max' };
+for (const key in person) {
+    console.log(key, person[key]);
 }
-
-console.log('Для трюка подходят:', validPersons);
-console.log('\nДля трюка НЕ подходят:', invalidPersons);
+/* Для объекта person ожидаемый вывод:
+age: 10
+name:
+child: Max
+*/
