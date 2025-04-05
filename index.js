@@ -394,50 +394,129 @@
 //
 // }
 // for (const age in counter) {
-//     console.log (`Возраст = ${age}. 'Количество людей = ${counter[age]}`);
+// //     console.log (`Возраст = ${age}. 'Количество людей = ${counter[age]}`);
+// // }
+//
+//
+// const mary = {
+//     name: 'Mary',
+//     wantApples: 2,
+// };
+//
+// const alex = {
+//     name: 'Alex',
+//     wantApples: 1,
+// };
+//
+// const mike = {
+//     name: 'Mike',
+//     wantApples: 5,
+// };
+//
+// const brown = {
+//     name: 'Brown',
+//     wantApples: 4,
+// };
+//
+// const people = [mary, alex, mike, brown];
+// const apples = 11;
+//
+// const applesPerPerson = Math.floor(apples / people.length);
+//
+//
+// const happyPeople = [];
+// const unhappyPeople = [];
+//
+// for (const person of people) {
+//
+//     person.eaten = applesPerPerson;
+//     person.isHappy = person.eaten >= person.wantApples;
+//
+//     if (person.isHappy) {
+//         happyPeople.push(person);
+//     } else {
+//         unhappyPeople.push(person);
+//     }
 // }
+//
+// console.log('Happy people:', happyPeople);
+// console.log('Unhappy people:', unhappyPeople);
 
 
-const mary = {
-    name: 'Mary',
-    wantApples: 2,
+const alice = {
+    name: 'Alice',
+    age: 10,
+    illness: null,
+    driverLicenses: ['B'],
 };
 
-const alex = {
-    name: 'Alex',
-    wantApples: 1,
+const bob = {
+    name: 'Bob',
+    age: 18,
+    illness: 'Cold',
+    driverLicenses: ['B'],
 };
 
-const mike = {
-    name: 'Mike',
-    wantApples: 5,
+const charlie = {
+    name: 'Charlie',
+    age: 17,
+    illness: null,
+    driverLicenses: ['C', 'E'],
 };
 
-const brown = {
-    name: 'Brown',
-    wantApples: 4,
+const diana = {
+    name: 'Diana',
+    age: 22,
+    illness: 'H. Disease',
+    driverLicenses: ['A', 'C', 'D'],
 };
 
-const people = [mary, alex, mike, brown];
-const apples = 11;
+const eve = {
+    name: 'Eve',
+    age: 35,
+    illness: null,
+    driverLicenses: ['A', 'B', 'E'],
+};
 
-const applesPerPerson = Math.floor(apples / people.length);
+const frank = {
+    name: 'Frank',
+    age: 37,
+    illness: null,
+    driverLicenses: [],
+};
 
+const gorge = {
+    name: 'Gorge',
+    age: 28,
+    illness: null,
+    driverLicenses: ['B', 'D'],
+};
 
-const happyPeople = [];
-const unhappyPeople = [];
+const persons = [alice, bob, charlie, diana, eve, frank, gorge];
 
-for (const person of people) {
+const invalidPersons = [];
+const validPersons = [];
 
-    person.eaten = applesPerPerson;
-    person.isHappy = person.eaten >= person.wantApples;
+for (const person of persons) {
+    const { age, illness, driverLicenses } = person;
 
-    if (person.isHappy) {
-        happyPeople.push(person);
-    } else {
-        unhappyPeople.push(person);
+    if (age < 18) {
+    person.reason = 'Молодой';
+    invalidPersons.push(person);
+    continue;
     }
+    if (illness) {
+    person.reason = 'Болен';
+    invalidPersons.push(person);
+    continue;
+    }
+    if (driverLicenses.includes('В')) {
+        person.reason = 'Нет прав';
+        invalidPersons.push(person);
+        continue;
+    }
+    validPersons.push(person);
 }
 
-console.log('Happy people:', happyPeople);
-console.log('Unhappy people:', unhappyPeople);
+console.log('Для трюка подходят:', validPersons);
+console.log('\nДля трюка НЕ подходят:', invalidPersons);
