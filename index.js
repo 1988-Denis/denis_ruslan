@@ -522,12 +522,19 @@
 // console.log('\nДля трюка НЕ подходят:', invalidPersons);
 
 
+// const person = { age: 10, name: '', child: 'Max' };
+// for (const key in person) {
+//     console.log(key, person[key]);
+// }
+
+
 const person = { age: 10, name: '', child: 'Max' };
+const keys = [];
+const values = [];
+
 for (const key in person) {
-    console.log(key, person[key]);
+    keys.push(key);
+    values.push(person[key]);
 }
-/* Для объекта person ожидаемый вывод:
-age: 10
-name:
-child: Max
-*/
+console.log(values);
+console.log(keys);
