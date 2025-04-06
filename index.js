@@ -539,35 +539,65 @@
 // console.log(values);
 // console.log(keys);
 
+//
+// const user = {
+//     example: [1, 2, 3],
+//     'X-Address': {
+//         street: 'Ленина',
+//         house: '10-Б',
+//     },
+//     nickname: null,
+//     permissions: [true, false],
+//     age: 101,
+//     emails: ['alice@example.com', 'bob@example.com', 'charlie@example.com', 'peter@example.com'],
+//     name: 'Peter Charles',
+//     isAdult: true,
+//     now: new Date().toISOString(),
+// };
+// let maxLength = null;
+// let lastElement = null;
+//
+// for (const key in user) {
+//     for (const key in user) {
+//         if (Array.isArray(user[key])) {
+//             const currentArray = user[key];
+//             if (currentArray.length > maxLength) {
+//                 maxLength = currentArray.length;
+//                 lastElement = currentArray[currentArray.length - 1]; // Берём последний элемент
+//             }
+//         }
+//     }
+//
+//     console.log(`Максимальная длина: ${maxLength}. Последнее значение: ${lastElement}`);
+//
+// }
 
-const user = {
-    example: [1, 2, 3],
-    'X-Address': {
-        street: 'Ленина',
-        house: '10-Б',
-    },
-    nickname: null,
-    permissions: [true, false],
-    age: 101,
-    emails: ['alice@example.com', 'bob@example.com', 'charlie@example.com', 'peter@example.com'],
-    name: 'Peter Charles',
-    isAdult: true,
-    now: new Date().toISOString(),
-};
-let maxLength = null;
-let lastElement = null;
+// const object1 = { name: 'n', age: 10 };
+// const object2 = { age: 10, name: 'n' };
 
-for (const key in user) {
-    for (const key in user) {
-        if (Array.isArray(user[key])) {
-            const currentArray = user[key];
-            if (currentArray.length > maxLength) {
-                maxLength = currentArray.length;
-                lastElement = currentArray[currentArray.length - 1]; // Берём последний элемент
-            }
+// const object1 = { name: 'n', size: 3 };
+// const object2 = { size: 3 };
+//
+// const object1 = {};
+// const object2 = {};
+//
+// const object1 = { isAdult: true, email: 'example@mail.com', page: 100 };
+// const object2 = { page: 100, isAdult: true, email: 'example@mail.com' };
+//
+const object1 = { checked: 1 };
+const object2 = { checked: true };
+
+let isSame = true;
+
+if (Object.keys(object1).length !== Object.keys(object2).length) {
+    isSame = false;
+} else {
+    for (let key in object1) {
+        if (!object2.hasOwnProperty(key) || object1[key] !== object2[key]) {
+            isSame = false;
+            break;
         }
     }
-
-    console.log(`Максимальная длина: ${maxLength}. Последнее значение: ${lastElement}`);
-    
 }
+
+console.log(isSame);
