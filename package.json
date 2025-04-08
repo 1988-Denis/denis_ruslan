@@ -1,5 +1,12 @@
 {
   "name": "untitled2",
   "version": "1.0.0",
-  "scripts": {}
+  "scripts": {
+    "build": "rimraf dict",
+    "start:prod": "node ./dist/main.ts",
+    "start": "ts-node ./src/main.ts"
+  },
+  "dependencies": {
+    "rimraf": "^6.0.1"
+  }
 }
