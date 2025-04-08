@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Проинициализирован npm">
+    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Добавлен Dayjs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +62,7 @@
       <workItem from="1743605220190" duration="4706000" />
       <workItem from="1743786113150" duration="1411000" />
       <workItem from="1743860578910" duration="7445000" />
-      <workItem from="1744114799856" duration="2270000" />
+      <workItem from="1744114799856" duration="3386000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлено задание Елочка и Вывод матрицы">
       <option name="closed" value="true" />
@@ -168,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744116316651</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Добавлен Dayjs">
+      <option name="closed" value="true" />
+      <created>1744117685825</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1744117685825</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +206,7 @@
     <MESSAGE value="Добавлено задание for in Самый длинный массив" />
     <MESSAGE value="Добавлено задание for in Сравнение объектов" />
     <MESSAGE value="Проинициализирован npm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Проинициализирован npm" />
+    <MESSAGE value="Добавлен Dayjs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен Dayjs" />
   </component>
 </project>
