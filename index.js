@@ -583,21 +583,21 @@
 //
 // const object1 = { isAdult: true, email: 'example@mail.com', page: 100 };
 // const object2 = { page: 100, isAdult: true, email: 'example@mail.com' };
+// //
+// const object1 = { checked: 1 };
+// const object2 = { checked: true };
 //
-const object1 = { checked: 1 };
-const object2 = { checked: true };
-
-let isSame = true;
-
-if (Object.keys(object1).length !== Object.keys(object2).length) {
-    isSame = false;
-} else {
-    for (let key in object1) {
-        if (!object2.hasOwnProperty(key) || object1[key] !== object2[key]) {
-            isSame = false;
-            break;
-        }
-    }
-}
-
-console.log(isSame);
+// let isSame = true;
+//
+// if (Object.keys(object1).length !== Object.keys(object2).length) {
+//     isSame = false;
+// } else {
+//     for (let key in object1) {
+//         if (!object2.hasOwnProperty(key) || object1[key] !== object2[key]) {
+//             isSame = false;
+//             break;
+//         }
+//     }
+// }
+//
+// console.log(isSame);

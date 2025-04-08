@@ -2,5 +2,7 @@
   "name": "untitled2",
   "version": "1.0.0",
   "scripts": {},
-
+  "dependencies": {
+    "dayjs": "^1.11.13"
+  }
 }

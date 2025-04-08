@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Добавлено задание for in Самый длинный массив">
+    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Проинициализирован npm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +61,8 @@
       <workItem from="1743441361512" duration="5053000" />
       <workItem from="1743605220190" duration="4706000" />
       <workItem from="1743786113150" duration="1411000" />
-      <workItem from="1743860578910" duration="6213000" />
+      <workItem from="1743860578910" duration="7445000" />
+      <workItem from="1744114799856" duration="2270000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлено задание Елочка и Вывод матрицы">
       <option name="closed" value="true" />
@@ -142,7 +144,31 @@
       <option name="project" value="LOCAL" />
       <updated>1743953124777</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Добавлено задание for in Сравнение объектов">
+      <option name="closed" value="true" />
+      <created>1743956317699</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743956317699</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Проинициализирован npm">
+      <option name="closed" value="true" />
+      <created>1744116280107</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1744116280107</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Проинициализирован npm">
+      <option name="closed" value="true" />
+      <created>1744116316651</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1744116316651</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +196,8 @@
     <MESSAGE value="Добавлено задание for in Вывод пар ключ-значение" />
     <MESSAGE value="Добавлено задание for in Ключи и значения" />
     <MESSAGE value="Добавлено задание for in Самый длинный массив" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено задание for in Самый длинный массив" />
+    <MESSAGE value="Добавлено задание for in Сравнение объектов" />
+    <MESSAGE value="Проинициализирован npm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Проинициализирован npm" />
   </component>
 </project>
