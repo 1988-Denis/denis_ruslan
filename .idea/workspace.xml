@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Добавлено задание Укажите типы" />
+    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Добавлено задание Укажите типы (верное)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +87,7 @@
       <workItem from="1744114799856" duration="7425000" />
       <workItem from="1744210858600" duration="888000" />
       <workItem from="1744649396545" duration="2283000" />
-      <workItem from="1744651734711" duration="308000" />
+      <workItem from="1744651734711" duration="2490000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлено задание Елочка и Вывод матрицы">
       <option name="closed" value="true" />
@@ -237,7 +241,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744652010946</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Добавлено задание Укажите типы (верное)">
+      <option name="closed" value="true" />
+      <created>1744652385954</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1744652385954</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +287,8 @@
     <MESSAGE value="Задания по клонированию проекта" />
     <MESSAGE value="Добавлен ESlint" />
     <MESSAGE value="Добавлено задание Укажите типы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено задание Укажите типы" />
+    <MESSAGE value="Добавлено задание Укажите типы (верное)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено задание Укажите типы (верное)" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
