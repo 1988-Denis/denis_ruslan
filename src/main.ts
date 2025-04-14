@@ -1,8 +1,8 @@
 type A = {
-  age: number | string;
+  age?: number | string;
   nick: string;
   info: number[] | { id: number } | string[] | {};
-  photo: string | null;
+  photo?: string | null;
 };
 const a1: A = {
   age: 10,
