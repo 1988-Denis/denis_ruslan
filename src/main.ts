@@ -121,8 +121,20 @@
 //   name: string;
 //   role: 'manager' | 'PM' | 'boss';
 // };
+//
+// type NumberPaty = 23 | 49 | 56;
+// let paty: NumberPaty = 23;
+// paty = 23;
+// paty = 49;
 
-type NumberPaty = 23 | 49 | 56;
-let paty: NumberPaty = 23;
-paty = 23;
-paty = 49;
+type UserRole = 'manager' | 'PM';
+type UserRole2 = 'GM' | 'GD';
+type Item = {
+  userRole: UserRole;
+  userRole2: UserRole2;
+};
+const myItems: Item = {
+  userRole: 'PM',
+  userRole2: 'GM',
+};
+console.log(myItems);
