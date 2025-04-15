@@ -103,21 +103,26 @@
 // }
 //
 // console.log(result.join(' - '));
+//
+// type UserRole = 'manager' | 'PM' | 'boss';
+// type Person = {
+//   name: string;
+//   email: string;
+//   role: UserRole;
+// };
+// const person: Person = {
+//   name: 'Viktor',
+//   email: 'dgth',
+//   role: 'PM',
+// };
+// person.role = 'PM';
+//
+// type Person1 = {
+//   name: string;
+//   role: 'manager' | 'PM' | 'boss';
+// };
 
-type UserRole = 'manager' | 'PM' | 'boss';
-type Person = {
-  name: string;
-  email: string;
-  role: UserRole;
-};
-const person: Person = {
-  name: 'Viktor',
-  email: 'dgth',
-  role: 'PM',
-};
-person.role = 'PM';
-
-type Person1 = {
-  name: string;
-  role: 'manager' | 'PM' | 'boss';
-};
+type NumberPaty = 23 | 49 | 56;
+let paty: NumberPaty = 23;
+paty = 23;
+paty = 49;
