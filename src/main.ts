@@ -91,15 +91,33 @@
 // console.log(chalk.blue.underline('Синий подчеркнутый'));
 // console.log(chalk.bgYellow.black('Черный на желтом фоне'));
 
-import { blue, green, red } from 'chalk';
+// import { blue, green, red } from 'chalk';
+//
+// const max = 10;
+// const result = [];
+// const colors = [red, green, blue];
+//
+// for (let i = 0; i < max; i++) {
+//   const color = colors[i % 3];
+//   result.push(color('*'));
+// }
+//
+// console.log(result.join(' - '));
 
-const max = 10;
-const result = [];
-const colors = [red, green, blue];
+type UserRole = 'manager' | 'PM' | 'boss';
+type Person = {
+  name: string;
+  email: string;
+  role: UserRole;
+};
+const person: Person = {
+  name: 'Viktor',
+  email: 'dgth',
+  role: 'PM',
+};
+person.role = 'PM';
 
-for (let i = 0; i < max; i++) {
-  const color = colors[i % 3];
-  result.push(color('*'));
-}
-
-console.log(result.join(' - '));
+type Person1 = {
+  name: string;
+  role: 'manager' | 'PM' | 'boss';
+};
