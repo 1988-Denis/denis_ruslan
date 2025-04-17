@@ -129,12 +129,17 @@
 
 type UserRole = 'manager' | 'PM';
 type UserRole2 = 'GM' | 'GD';
+
 type Item = {
   userRole: UserRole;
   userRole2: UserRole2;
+  createdAt: Date;
+  createdAtISO: string;
 };
 const myItems: Item = {
   userRole: 'PM',
   userRole2: 'GM',
+  createdAt: new Date(),
+  createdAtISO: new Date().toISOString(),
 };
 console.log(myItems);
