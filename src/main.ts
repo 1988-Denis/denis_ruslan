@@ -163,13 +163,28 @@
 // console.log(7, dayjs('2024-08-23T10:30:00-04:00').toISOString());
 // console.log(11, dayjs('2024-08-24T02:30:00+12:00').toISOString());
 
+// import chalk from 'chalk';
+//
+// enum Street {
+//   Green = 'Green',
+//   Lenina = 'Red',
+//   Jykovan = 'Yellow',
+// }
+// const streets = Object.values(Street);
+//
+// console.log(chalk.green.bold(streets[0]), chalk.red.bold(streets[1]), chalk.yellow.bold(streets[2]));
+
+import { faker } from '@faker-js/faker';
 import chalk from 'chalk';
 
-enum Street {
-  Green = 'Green',
-  Lenina = 'Red',
-  Jykovan = 'Yellow',
-}
-const streets = Object.values(Street);
-
-console.log(chalk.green.bold(streets[0]), chalk.red.bold(streets[1]), chalk.yellow.bold(streets[2]));
+const PM = {
+  email: faker.internet.email(),
+  adress: {
+    country: faker.location.country(),
+    city: faker.location.city(),
+  },
+};
+console.log(chalk.blue.bold('PM:'));
+console.log(
+  chalk.green('  email: ') + chalk.red(PM.email) + '\n' + chalk.green('  adress: ') + chalk.yellow(PM.adress),
+);
