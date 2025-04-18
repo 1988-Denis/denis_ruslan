@@ -174,17 +174,47 @@
 //
 // console.log(chalk.green.bold(streets[0]), chalk.red.bold(streets[1]), chalk.yellow.bold(streets[2]));
 
+// import { faker } from '@faker-js/faker';
+// import chalk from 'chalk';
+//
+// const PM = {
+//   email: faker.internet.email(),
+//   adress: {
+//     country: faker.location.country(),
+//     city: faker.location.city(),
+//   },
+// };
+// console.log(chalk.blue.bold('PM:'));
+// console.log(
+//   chalk.green('  email: ') + chalk.red(PM.email) + '\n' + chalk.green('  adress: ') + chalk.yellow(PM.adress),
+// );
 import { faker } from '@faker-js/faker';
-import chalk from 'chalk';
 
-const PM = {
-  email: faker.internet.email(),
-  adress: {
-    country: faker.location.country(),
-    city: faker.location.city(),
-  },
+enum color {
+  green = 'green',
+  yellow = 'yellow',
+  blue = 'blue',
+}
+
+type User = {
+  id: string;
+  name: string;
+  email: string;
+  favoriteColor: color;
 };
-console.log(chalk.blue.bold('PM:'));
-console.log(
-  chalk.green('  email: ') + chalk.red(PM.email) + '\n' + chalk.green('  adress: ') + chalk.yellow(PM.adress),
-);
+
+const users: User[] = Array.from({ length: 5 }, () => ({
+  id: faker.string.uuid(),
+  name: faker.person.firstName(),
+  email: faker.internet.email(),
+  favoriteColor: faker.helpers.arrayElement(Object.values(color)),
+}));
+
+const randomColor = faker.helpers.arrayElement(Object.values(color));
+
+console.log(`Пользователи, которые любят ${randomColor}:`);
+if (randomColor.length === 0) {
+  console.log('Таких пользователей нет');
+} else {
+  console.log(randomColor);
+}
