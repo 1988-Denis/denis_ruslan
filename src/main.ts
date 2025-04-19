@@ -188,33 +188,96 @@
 // console.log(
 //   chalk.green('  email: ') + chalk.red(PM.email) + '\n' + chalk.green('  adress: ') + chalk.yellow(PM.adress),
 // );
-import { faker } from '@faker-js/faker';
+// import { faker } from '@faker-js/faker';
+//
+// enum color {
+//   green = 'green',
+//   yellow = 'yellow',
+//   blue = 'blue',
+// }
+//
+// type User = {
+//   id: string;
+//   name: string;
+//   email: string;
+//   favoriteColor: color;
+// };
+//
+// const users: User[] = Array.from({ length: 5 }, () => ({
+//   id: faker.string.uuid(),
+//   name: faker.person.firstName(),
+//   email: faker.internet.email(),
+//   favoriteColor: faker.helpers.arrayElement(Object.values(color)),
+// }));
+//
+// const randomColor = faker.helpers.arrayElement(Object.values(color));
+//
+// console.log(`Пользователи, которые любят ${randomColor}:`);
+// if (randomColor.length === 0) {
+//   console.log('Таких пользователей нет');
+// } else {
+//   console.log(randomColor);
+// }
 
-enum color {
-  green = 'green',
-  yellow = 'yellow',
-  blue = 'blue',
-}
-
-type User = {
-  id: string;
-  name: string;
-  email: string;
-  favoriteColor: color;
+type MyType = {
+  requiredField: string;
+  optionalField?: string | null;
 };
 
-const users: User[] = Array.from({ length: 5 }, () => ({
-  id: faker.string.uuid(),
-  name: faker.person.firstName(),
-  email: faker.internet.email(),
-  favoriteColor: faker.helpers.arrayElement(Object.values(color)),
-}));
+// Создаем 4 объекта
+const obj1: MyType = {
+  requiredField: 'Обязательное поле 1',
+  // optionalField отсутствует
+};
 
-const randomColor = faker.helpers.arrayElement(Object.values(color));
+const obj2: MyType = {
+  requiredField: 'Обязательное поле 2',
+  optionalField: null,
+};
 
-console.log(`Пользователи, которые любят ${randomColor}:`);
-if (randomColor.length === 0) {
-  console.log('Таких пользователей нет');
+const obj3: MyType = {
+  requiredField: 'Обязательное поле 3',
+  optionalField: '',
+};
+
+const obj4: MyType = {
+  requiredField: 'Обязательное поле 4',
+  optionalField: 'Hello, World!',
+};
+
+// Проверка для каждого объекта
+// Объект 1
+if (!('optionalField' in obj1) || obj1.optionalField === null) {
+  console.log('не обнаружено');
+} else if (obj1.optionalField === '') {
+  console.log('пусто');
 } else {
-  console.log(randomColor);
+  console.log(obj1.optionalField);
+}
+
+// Объект 2
+if (!('optionalField' in obj2) || obj2.optionalField === null) {
+  console.log('не обнаружено');
+} else if (obj2.optionalField === '') {
+  console.log('пусто');
+} else {
+  console.log(obj2.optionalField);
+}
+
+// Объект 3
+if (!('optionalField' in obj3) || obj3.optionalField === null) {
+  console.log('не обнаружено');
+} else if (obj3.optionalField === '') {
+  console.log('пусто');
+} else {
+  console.log(obj3.optionalField);
+}
+
+// Объект 4
+if (!('optionalField' in obj4) || obj4.optionalField === null) {
+  console.log('не обнаружено');
+} else if (obj4.optionalField === '') {
+  console.log('пусто');
+} else {
+  console.log(obj4.optionalField);
 }
