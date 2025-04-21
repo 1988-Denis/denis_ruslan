@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Задание Любимые цвета">
+    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Задание Микс">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
@@ -89,7 +89,8 @@
       <workItem from="1744651734711" duration="6413000" />
       <workItem from="1744909313390" duration="6050000" />
       <workItem from="1744995815945" duration="4518000" />
-      <workItem from="1745083000001" duration="3131000" />
+      <workItem from="1745083000001" duration="3201000" />
+      <workItem from="1745256337798" duration="3750000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлено задание Елочка и Вывод матрицы">
       <option name="closed" value="true" />
@@ -339,7 +340,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744999957025</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Задание Микс">
+      <option name="closed" value="true" />
+      <created>1745086366756</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1745086366756</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +368,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Добавлено задание Деление яблок" />
     <MESSAGE value="Добавлено задание Каскадёры" />
     <MESSAGE value="Добавлено задание for in Вывод пар ключ-значение" />
     <MESSAGE value="Добавлено задание for in Ключи и значения" />
@@ -384,7 +392,8 @@
     <MESSAGE value="Задание Цвета" />
     <MESSAGE value="Задание Faker" />
     <MESSAGE value="Задание Любимые цвета" />
-    <option name="LAST_COMMIT_MESSAGE" value="Задание Любимые цвета" />
+    <MESSAGE value="Задание Микс" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задание Микс" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>
