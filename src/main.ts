@@ -280,10 +280,27 @@
 //   console.log('пусто');
 // } else {
 //   console.log(obj4.optionalField);
+// // }
+// function sumObject(obj) {
+//   if (!obj || typeof obj !== 'object') return 0;
+//   return Object.values(obj).reduce((sum, value) => sum + (Number(value) || 0), 0);
 // }
-function sumObject(obj) {
-  if (!obj || typeof obj !== 'object') return 0;
-  return Object.values(obj).reduce((sum, value) => sum + (Number(value) || 0), 0);
-}
-const sample = { a: 10, b: 20, c: 30 };
-console.log(sumObject(sample));
+// const sample = { a: 10, b: 20, c: 30 };
+// console.log(sumObject(sample));
+import { faker } from '@faker-js/faker';
+
+const UserInfo = {
+  // name: 'Stas',
+  name: faker.person.firstName(),
+  age: faker.number.octal({ min: 1, max: 99 }),
+};
+const StasAge = (arr: Array<{ name: string; age?: number | null }>): string | number => {
+  for (const i in arr) {
+    if (UserInfo.name === 'Stas') {
+      return UserInfo.age == null ? 'Возраста нет' : arr[i].age!;
+    }
+  }
+  return 'Объект не найден';
+};
+console.log('Данные запроса', UserInfo);
+console.log('Результат поиска', StasAge);
