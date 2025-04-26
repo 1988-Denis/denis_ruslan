@@ -287,40 +287,52 @@
 // }
 // const sample = { a: 10, b: 20, c: 30 };
 // console.log(sumObject(sample));
+//
+// import { faker } from '@faker-js/faker';
+//
+// // Определяем тип для пользователя
+// type User = {
+//   name: string;
+//   age?: number | null;
+// };
+//
+// // Функция для создания тестовых данных
+// function createTestUsers(): User[] {
+//   return [
+//     { name: 'Anna', age: 25 },
+//     { name: 'Stas', age: faker.number.int({ min: 18, max: 60 }) },
+//     { name: 'Mike', age: null },
+//     { name: 'Olga', age: undefined },
+//     { name: 'Ivan' },
+//   ];
+// }
+//
+// // функция для поиска возраста Stas
+// function findStasAge(users: User[]): string | number {
+//   for (const user of users) {
+//     if (user.name === 'Stas') {
+//       if (user.age === null || user.age === undefined) {
+//         return 'Возраста нет';
+//       }
+//       return user.age;
+//     }
+//   }
+//   return 'Объект не найден';
+// }
+//
+// // Тестирование функции
+// const testUsers = createTestUsers();
+// console.log('Тестовые данные:', testUsers);
+// console.log('Результат поиска:', findStasAge(testUsers));
 
-import { faker } from '@faker-js/faker';
+const source = 'the quick brown fox jumps over the lazy dog';
+const custom = 'oak lgypb wited zts qgfch tuki oak mjrn xtv';
+const encoded = 'ntg ajuk fjbydv vikjo citvikhh yd mkjidydv qjujhpiyco. ptdvijoh!';
 
-// Определяем тип для пользователя
-type User = {
-  name: string;
-  age?: number | null;
-};
+// объект для замены символов/ fromEntries метод, который преобразует список пар «ключ — значение» в объект
+const decoder = Object.fromEntries([...source].map((char, i) => [custom[i], char]));
 
-// Функция для создания тестовых данных
-function createTestUsers(): User[] {
-  return [
-    { name: 'Anna', age: 25 },
-    { name: 'Stas', age: faker.number.int({ min: 18, max: 60 }) },
-    { name: 'Mike', age: null },
-    { name: 'Olga', age: undefined },
-    { name: 'Ivan' },
-  ];
-}
+// Декодируем текст
+const decoded = [...encoded].map((c) => decoder[c] || c).join('');
 
-// функция для поиска возраста Stas
-function findStasAge(users: User[]): string | number {
-  for (const user of users) {
-    if (user.name === 'Stas') {
-      if (user.age === null || user.age === undefined) {
-        return 'Возраста нет';
-      }
-      return user.age;
-    }
-  }
-  return 'Объект не найден';
-}
-
-// Тестирование функции
-const testUsers = createTestUsers();
-console.log('Тестовые данные:', testUsers);
-console.log('Результат поиска:', findStasAge(testUsers));
+console.log(decoded);
