@@ -325,14 +325,29 @@
 // console.log('Тестовые данные:', testUsers);
 // console.log('Результат поиска:', findStasAge(testUsers));
 
-const source = 'the quick brown fox jumps over the lazy dog';
-const custom = 'oak lgypb wited zts qgfch tuki oak mjrn xtv';
-const encoded = 'ntg ajuk fjbydv vikjo citvikhh yd mkjidydv qjujhpiyco. ptdvijoh!';
+// const source = 'the quick brown fox jumps over the lazy dog';
+// const custom = 'oak lgypb wited zts qgfch tuki oak mjrn xtv';
+// const encoded = 'ntg ajuk fjbydv vikjo citvikhh yd mkjidydv qjujhpiyco. ptdvijoh!';
+//
+// // объект для замены символов/ fromEntries метод, который преобразует список пар «ключ — значение» в объект
+// const decoder = Object.fromEntries([...source].map((char, i) => [custom[i], char]));
+//
+// // Декодируем текст
+// const decoded = [...encoded].map((c) => decoder[c] || c).join('');
+//
+// console.log(decoded);
 
-// объект для замены символов/ fromEntries метод, который преобразует список пар «ключ — значение» в объект
-const decoder = Object.fromEntries([...source].map((char, i) => [custom[i], char]));
+import dayjs from 'dayjs';
 
-// Декодируем текст
-const decoded = [...encoded].map((c) => decoder[c] || c).join('');
+type dayDa = () => dayjs;
 
-console.log(decoded);
+const today = (cdPast: dayDa, cbFuture: dayDa) => {
+  const now = new Date();
+  if (now) {
+    cdPast();
+  } else {
+    cbFuture();
+  }
+};
+const pastCallback = () => console.log('Это прошлое');
+const futureCallback = () => console.log('Это будущее');
