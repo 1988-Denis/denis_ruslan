@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Задание Шифр">
+    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Задание Колбеки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +96,9 @@
       <workItem from="1745420144187" duration="596000" />
       <workItem from="1745516340960" duration="10759000" />
       <workItem from="1745682041511" duration="3503000" />
-      <workItem from="1746369454994" duration="2432000" />
+      <workItem from="1746369454994" duration="3184000" />
+      <workItem from="1747234834998" duration="727000" />
+      <workItem from="1747585572388" duration="1062000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлено задание Елочка и Вывод матрицы">
       <option name="closed" value="true" />
@@ -384,7 +388,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745686874599</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Задание Колбеки">
+      <option name="closed" value="true" />
+      <created>1746374393508</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1746374393508</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +416,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Добавлено задание for in Сравнение объектов" />
     <MESSAGE value="Проинициализирован npm" />
     <MESSAGE value="Добавлен Dayjs" />
     <MESSAGE value="Добавлен TypeScript" />
@@ -429,7 +440,8 @@
     <MESSAGE value="Задание Возраст Стаса" />
     <MESSAGE value="Задание Возраст Стаса. версия 2" />
     <MESSAGE value="Задание Шифр" />
-    <option name="LAST_COMMIT_MESSAGE" value="Задание Шифр" />
+    <MESSAGE value="Задание Колбеки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задание Колбеки" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

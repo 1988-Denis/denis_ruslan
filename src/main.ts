@@ -337,17 +337,31 @@
 //
 // console.log(decoded);
 
-import dayjs from 'dayjs';
+// type dayDa = () => dayjs;
+//
+// const today = (cdPast: dayDa, cbFuture: dayDa) => {
+//   const now = new Date();
+//   if (now) {
+//     cdPast();
+//   } else {
+//     cbFuture();
+//   }
+// };
+// const pastCallback = () => console.log('Это прошлое');
+// const futureCallback = () => console.log('Это будущее');
 
-type dayDa = () => dayjs;
+import { faker } from '@faker-js/faker';
 
-const today = (cdPast: dayDa, cbFuture: dayDa) => {
-  const now = new Date();
-  if (now) {
-    cdPast();
-  } else {
-    cbFuture();
-  }
-};
-const pastCallback = () => console.log('Это прошлое');
-const futureCallback = () => console.log('Это будущее');
+const generatePerson = () => ({
+  email: faker.internet.email(),
+  age: faker.number.int({ min: 1, max: 67 }),
+  address: {
+    country: faker.location.country(),
+    city: faker.location.city(),
+  },
+});
+
+const persons = Array.from({ length: 5 }, generatePerson);
+
+const adult = persons.find((person) => person.age >= 10);
+console.log(adult);
