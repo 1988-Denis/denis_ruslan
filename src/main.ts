@@ -386,18 +386,34 @@
 // const person3 = smartSearch(storage, 'name', 'second');
 // console.log(person3); // { age: 20, name: 'second' }
 
-import { faker } from '@faker-js/faker';
+// import { faker } from '@faker-js/faker';
+//
+// const generatePerson = () => ({
+//   email: faker.internet.email(),
+//   age: faker.number.int({ min: 1, max: 67 }),
+//   address: {
+//     country: faker.location.country(),
+//     city: faker.location.city(),
+//   },
+// });
+//
+// const persons = Array.from({ length: 5 }, generatePerson);
+//
+// const randomPersons = persons.filter(() => Math.random() > 0.5);
+// console.log('Случайные  персоны:', randomPersons);
+type User = {
+  name: string;
+  age: number;
+};
 
-const generatePerson = () => ({
-  email: faker.internet.email(),
-  age: faker.number.int({ min: 1, max: 67 }),
-  address: {
-    country: faker.location.country(),
-    city: faker.location.city(),
-  },
-});
-
-const persons = Array.from({ length: 5 }, generatePerson);
-
-const randomPersons = persons.filter(() => Math.random() > 0.5);
-console.log('Случайные  персоны:', randomPersons);
+const users: User[] = [
+  { name: 'Пользователь-1', age: 1 },
+  { name: 'Пользователь-21', age: 21 },
+  { name: 'Пользователь-30', age: 30 },
+  { name: 'Пользователь-14', age: 14 },
+  { name: 'Пользователь-18', age: 18 },
+  { name: 'Пользователь--1', age: -1 },
+  { name: 'Пользователь-1', age: 1 },
+];
+const old = users.filter((user) => user.age >= 18);
+console.log(old);
