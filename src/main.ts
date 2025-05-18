@@ -365,23 +365,39 @@
 //
 // const adult = persons.find((person) => person.age >= 10);
 // console.log(adult);
+//
+// const storage = [
+//   { age: 10, name: 'first' },
+//   { age: 20, name: 'second' },
+//   { age: 30, name: 'third' },
+//   { age: 40, name: 'fourth' },
+// ];
+//
+// const smartSearch = (arr: any[], property: any, value: any) => {
+//   return arr.find((item) => item[property] === value);
+// };
+//
+// const person1 = smartSearch(storage, 'age', 30);
+// console.log(person1); // { age: 30, name: 'third' }
+//
+// const person2 = smartSearch(storage, 'age', 10);
+// console.log(person2); // { age: 10, name: 'first' }
+//
+// const person3 = smartSearch(storage, 'name', 'second');
+// console.log(person3); // { age: 20, name: 'second' }
 
-const storage = [
-  { age: 10, name: 'first' },
-  { age: 20, name: 'second' },
-  { age: 30, name: 'third' },
-  { age: 40, name: 'fourth' },
-];
+import { faker } from '@faker-js/faker';
 
-const smartSearch = (arr: any[], property: any, value: any) => {
-  return arr.find((item) => item[property] === value);
-};
+const generatePerson = () => ({
+  email: faker.internet.email(),
+  age: faker.number.int({ min: 1, max: 67 }),
+  address: {
+    country: faker.location.country(),
+    city: faker.location.city(),
+  },
+});
 
-const person1 = smartSearch(storage, 'age', 30);
-console.log(person1); // { age: 30, name: 'third' }
+const persons = Array.from({ length: 5 }, generatePerson);
 
-const person2 = smartSearch(storage, 'age', 10);
-console.log(person2); // { age: 10, name: 'first' }
-
-const person3 = smartSearch(storage, 'name', 'second');
-console.log(person3); // { age: 20, name: 'second' }
+const randomPersons = persons.filter(() => Math.random() > 0.5);
+console.log('Случайные  персоны:', randomPersons);
