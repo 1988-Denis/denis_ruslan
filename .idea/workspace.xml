@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Задание Удаление из массива">
+    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Задание Палиндром">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +97,7 @@
       <workItem from="1746369454994" duration="3184000" />
       <workItem from="1747234834998" duration="727000" />
       <workItem from="1747585572388" duration="4088000" />
+      <workItem from="1747764318556" duration="1803000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлено задание Елочка и Вывод матрицы">
       <option name="closed" value="true" />
@@ -425,7 +427,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747589953160</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Задание Палиндром">
+      <option name="closed" value="true" />
+      <created>1747764392444</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1747764392444</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +455,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Задания по клонированию проекта" />
     <MESSAGE value="Добавлен ESlint" />
     <MESSAGE value="Добавлено задание Укажите типы" />
     <MESSAGE value="Добавлено задание Укажите типы (верное)" />
@@ -470,7 +479,8 @@
     <MESSAGE value="Задание Умный поиск в массиве" />
     <MESSAGE value="Задание Рандомный фильтр" />
     <MESSAGE value="Задание Удаление из массива" />
-    <option name="LAST_COMMIT_MESSAGE" value="Задание Удаление из массива" />
+    <MESSAGE value="Задание Палиндром" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задание Палиндром" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

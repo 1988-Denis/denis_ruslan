@@ -417,38 +417,64 @@
 // ];
 // const old = users.filter((user) => user.age >= 18);
 // console.log(old);
+//
+// import { green, red } from 'chalk';
+//
+// function isPalindrome(str: string): boolean {
+//   return str === str.split('').reverse().join('');
+// }
+//
+// const tests = [
+//   ['топот', true],
+//   ['пот', false],
+//   ['потоп', true],
+//   ['кабак', true],
+//   ['(())', false],
+//   ['табат', true],
+//   ['abab', false],
+//   ['топпот', true],
+//   ['()()', false],
+//   ['', true],
+//   ['123321', true],
+//   ['())(', true],
+//   ['abba', true],
+//   ['а роза упала на лапу азора', false], // Пробелы не совпадают!
+// ] as const;
+//
+// for (const test of tests) {
+//   const [word, expected] = test;
+//
+//   const result = isPalindrome(word);
+//   if (result !== expected) {
+//     console.log(red(`Для слова "${word}" тест не прошел. Ожидалось: ${expected} | Получено: ${result}`));
+//     continue;
+//   }
+//
+//   console.log(green(`Слово "${word}" успешно. Результат: ${result}`));
+// }
 
-import { green, red } from 'chalk';
+// const storage = [
+//   { age: 10, name: 'first' },
+//   { age: 20, name: 'second' },
+//   { age: 30, name: 'third' },
+//   { age: 40, name: 'fourth' },
+// ];
+//
+// const smalls = storage.map((s) => s.age > 20);
+//
+// console.log(smalls);
 
-function isPalindrome(str: string): boolean {
-  return str === str.split('').reverse().join('');
-}
+const storage = [
+  { age: 10, name: 'first' },
+  { age: 20, name: 'second' },
+  { age: 30, name: 'third' },
+  { age: 40, name: 'fourth' },
+];
 
-const tests = [
-  ['топот', true],
-  ['пот', false],
-  ['потоп', true],
-  ['кабак', true],
-  ['(())', false],
-  ['табат', true],
-  ['abab', false],
-  ['топпот', true],
-  ['()()', false],
-  ['', true],
-  ['123321', true],
-  ['())(', true],
-  ['abba', true],
-  ['а роза упала на лапу азора', false], // Пробелы не совпадают!
-] as const;
+const storage2 = storage.map((item) => ({
+  age: item.name,
+  name: item.age,
+  reversed: true,
+}));
 
-for (const test of tests) {
-  const [word, expected] = test;
-
-  const result = isPalindrome(word);
-  if (result !== expected) {
-    console.log(red(`Для слова "${word}" тест не прошел. Ожидалось: ${expected} | Получено: ${result}`));
-    continue;
-  }
-
-  console.log(green(`Слово "${word}" успешно. Результат: ${result}`));
-}
+console.log(storage2);
