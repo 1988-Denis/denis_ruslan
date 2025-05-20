@@ -401,19 +401,54 @@
 //
 // const randomPersons = persons.filter(() => Math.random() > 0.5);
 // console.log('Случайные  персоны:', randomPersons);
-type User = {
-  name: string;
-  age: number;
-};
+// type User = {
+//   name: string;
+//   age: number;
+// };
+//
+// const users: User[] = [
+//   { name: 'Пользователь-1', age: 1 },
+//   { name: 'Пользователь-21', age: 21 },
+//   { name: 'Пользователь-30', age: 30 },
+//   { name: 'Пользователь-14', age: 14 },
+//   { name: 'Пользователь-18', age: 18 },
+//   { name: 'Пользователь--1', age: -1 },
+//   { name: 'Пользователь-1', age: 1 },
+// ];
+// const old = users.filter((user) => user.age >= 18);
+// console.log(old);
 
-const users: User[] = [
-  { name: 'Пользователь-1', age: 1 },
-  { name: 'Пользователь-21', age: 21 },
-  { name: 'Пользователь-30', age: 30 },
-  { name: 'Пользователь-14', age: 14 },
-  { name: 'Пользователь-18', age: 18 },
-  { name: 'Пользователь--1', age: -1 },
-  { name: 'Пользователь-1', age: 1 },
-];
-const old = users.filter((user) => user.age >= 18);
-console.log(old);
+import { green, red } from 'chalk';
+
+function isPalindrome(str: string): boolean {
+  return str === str.split('').reverse().join('');
+}
+
+const tests = [
+  ['топот', true],
+  ['пот', false],
+  ['потоп', true],
+  ['кабак', true],
+  ['(())', false],
+  ['табат', true],
+  ['abab', false],
+  ['топпот', true],
+  ['()()', false],
+  ['', true],
+  ['123321', true],
+  ['())(', true],
+  ['abba', true],
+  ['а роза упала на лапу азора', false], // Пробелы не совпадают!
+] as const;
+
+for (const test of tests) {
+  const [word, expected] = test;
+
+  const result = isPalindrome(word);
+  if (result !== expected) {
+    console.log(red(`Для слова "${word}" тест не прошел. Ожидалось: ${expected} | Получено: ${result}`));
+    continue;
+  }
+
+  console.log(green(`Слово "${word}" успешно. Результат: ${result}`));
+}
