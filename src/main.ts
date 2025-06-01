@@ -464,17 +464,63 @@
 //
 // console.log(smalls);
 
-const storage = [
-  { age: 10, name: 'first' },
-  { age: 20, name: 'second' },
-  { age: 30, name: 'third' },
-  { age: 40, name: 'fourth' },
-];
+// const storage = [
+//   { age: 10, name: 'first' },
+//   { age: 20, name: 'second' },
+//   { age: 30, name: 'third' },
+//   { age: 40, name: 'fourth' },
+// ];
+//
+// const storage2 = storage.map((item) => ({
+//   age: item.name,
+//   name: item.age,
+//   reversed: true,
+// }));
+//
+// console.log(storage2);
 
-const storage2 = storage.map((item) => ({
-  age: item.name,
-  name: item.age,
-  reversed: true,
-}));
+// Эта функция принимает значение и возвращает true/false
+// const persons = [
+//   { age: 10, name: 'Kostya' },
+//   { age: 17, name: 'Kostya-2' },
+//   { age: 30, name: 'Pavel' },
+//   { age: 50, name: 'Pavel-2' },
+// ];
+//
+// const adult = persons.find((person) => person.age >= 18);
+// console.log(adult); // { age: 30, name: 'Pavel' }
+//
+// const old = persons.find((person) => person.age >= 100);
+// console.log(old); // undefined
 
-console.log(storage2);
+// const known = undefined;
+// const email = '';
+// const nick = 'nickname';
+// const age = 0;
+// const isReady = false;
+// const size = 1;
+// const photo = null;
+//
+// const where = {
+//   ...(email ? { email } : { n: 1 }),
+//   ...(nick ? { nick, n: 2 } : { g: 8 }),
+//   ...(age ? { age } : { n: 3 }),
+//   ...(isReady ? { isReady, n: 10 } : {}),
+//   ...(size ? { size, n: 9 } : {}),
+//   ...(known ? { known } : { x: 4 }),
+//   ...(photo ? { photo } : { x: 5 }),
+// };
+//
+// console.log(where);
+
+const mergeToNewObject = (a: any, b: any) => {
+  return { ...a, ...b };
+};
+
+const obj1 = { a: 10, b: 100, c: 1 };
+const obj2 = { a: 20, b: 200, e: 2 };
+const obj3 = mergeToNewObject(obj1, obj2);
+
+console.log(obj1); // { a: 10, b: 100, c: 1 }
+console.log(obj2); // { a: 20, b: 200, e: 2 }
+console.log(obj3); // { a: 20, b: 200, c: 1, e: 2 }
