@@ -524,51 +524,82 @@
 // console.log(obj1); // { a: 10, b: 100, c: 1 }
 // console.log(obj2); // { a: 20, b: 200, e: 2 }
 // console.log(obj3); // { a: 20, b: 200, c: 1, e: 2 }
+//
+// const merge = (a: any, b: any, order?: 1 | 2) => {
+//   const mergedObj = order === 2 ? { ...b, ...a } : { ...a, ...b };
+//   mergedObj.merged = order === 2 ? 'YES!' : 'NO!';
+//   return mergedObj;
+// };
+// // Если order === 2, то сначала распаковывается b, затем a.
+// // merged:
+// // Если order === 2, то merged: 'YES!'.
+// // В остальных случаях — merged: 'NO!'
+// const obj1 = { a: 10, b: 'b', c: 100, child: { name: 'ch', surname: 'hc' } };
+// const obj2 = { a: 20, b: ['b'], d: 200, child: { aa: 'aa', bb: 'bb' } };
+//
+// console.log(merge(obj1, obj2));
+// /* Вывод:
+// {
+//   a: 20,
+//   b: [ 'b' ],
+//   c: 100,
+//   child: { aa: 'aa', bb: 'bb' },
+//   d: 200,
+//   merged: 'NO!'
+// }
+// */
+//
+// console.log(merge(obj1, obj2, 1));
+// /* Вывод:
+// {
+//   a: 20,
+//   b: [ 'b' ],
+//   c: 100,
+//   child: { aa: 'aa', bb: 'bb' },
+//   d: 200,
+//   merged: 'NO!'
+// }
+// */
+//
+// console.log(merge(obj1, obj2, 2));
+// /* Вывод:
+// {
+//   a: 10,
+//   b: 'b',
+//   c: 100,
+//   child: { name: 'ch', surname: 'hc' },
+//   d: 200,
+//   merged: 'YES!'
+// }
+// */
 
-const merge = (a: any, b: any, order?: 1 | 2) => {
-  const mergedObj = order === 2 ? { ...b, ...a } : { ...a, ...b };
-  mergedObj.merged = order === 2 ? 'YES!' : 'NO!';
-  return mergedObj;
-};
-// Если order === 2, то сначала распаковывается b, затем a.
-// merged:
-// Если order === 2, то merged: 'YES!'.
-// В остальных случаях — merged: 'NO!'
-const obj1 = { a: 10, b: 'b', c: 100, child: { name: 'ch', surname: 'hc' } };
-const obj2 = { a: 20, b: ['b'], d: 200, child: { aa: 'aa', bb: 'bb' } };
+const storage = [
+  'nick',
+  'nack',
+  'nock',
+  [
+    {
+      first: 'forecast',
+      child: null,
+    },
+    {
+      first: 'castfore',
+      child: null,
+    },
+    'zzz',
+  ],
+  'no-1',
+  'no-2',
+] as const;
 
-console.log(merge(obj1, obj2));
-/* Вывод:
-{
-  a: 20,
-  b: [ 'b' ],
-  c: 100,
-  child: { aa: 'aa', bb: 'bb' },
-  d: 200,
-  merged: 'NO!'
-}
-*/
+const [
+  ,
+  ,
+  ,
+  [, b1, cos], // извлекаем второй объект и 'zzz' из вложенного массива
+  ...nos // остальные элементы ('no-1', 'no-2') в массив nos
+] = storage;
 
-console.log(merge(obj1, obj2, 1));
-/* Вывод:
-{
-  a: 20,
-  b: [ 'b' ],
-  c: 100,
-  child: { aa: 'aa', bb: 'bb' },
-  d: 200,
-  merged: 'NO!'
-}
-*/
-
-console.log(merge(obj1, obj2, 2));
-/* Вывод:
-{
-  a: 10,
-  b: 'b',
-  c: 100,
-  child: { name: 'ch', surname: 'hc' },
-  d: 200,
-  merged: 'YES!'
-}
-*/
+console.log(nos); // [ 'no-1', 'no-2' ]
+console.log(cos); // [ 'zzz' ]
+console.log(b1); // { first: 'castfore', child: null }
