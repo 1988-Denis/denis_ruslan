@@ -570,36 +570,83 @@
 //   child: { name: 'ch', surname: 'hc' },
 //   d: 200,
 //   merged: 'YES!'
-// }
-// */
+// // }
+// // */
+//
+// const storage = [
+//   'nick',
+//   'nack',
+//   'nock',
+//   [
+//     {
+//       first: 'forecast',
+//       child: null,
+//     },
+//     {
+//       first: 'castfore',
+//       child: null,
+//     },
+//     'zzz',
+//   ],
+//   'no-1',
+//   'no-2',
+// ] as const;
+//
+// const [
+//   ,
+//   ,
+//   ,
+//   [, b1, cos], // извлекаем второй объект и 'zzz' из вложенного массива
+//   ...nos // остальные элементы ('no-1', 'no-2') в массив nos
+// ] = storage;
+//
+// console.log(nos); // [ 'no-1', 'no-2' ]
+// console.log(cos); // [ 'zzz' ]
+// console.log(b1); // { first: 'castfore', child: null }
 
-const storage = [
-  'nick',
-  'nack',
-  'nock',
-  [
-    {
-      first: 'forecast',
-      child: null,
+const megaobject = {
+  child: null,
+  child1: {
+    nick: 'name',
+    nicknames: ['n1', 'n2', { n: 'n', b: 'b' }],
+    james: {
+      kates: {
+        nicks: {
+          nicknames: ['nn', 'vv', 'gg'],
+          child: {
+            nick: 'childName',
+            child: undefined,
+          },
+        },
+      },
     },
-    {
-      first: 'castfore',
-      child: null,
+  },
+  child2: {},
+  child3: 'child3',
+};
+
+const {
+  child,
+  child1: {
+    nick,
+    nicknames,
+    james: {
+      kates: {
+        nicks: {
+          nicknames: [nicknames1, ...otherNicks],
+          child: { nick: nick1, child: child1 },
+        },
+      },
     },
-    'zzz',
-  ],
-  'no-1',
-  'no-2',
-] as const;
+  },
+  ...otherChilds
+} = megaobject;
 
-const [
-  ,
-  ,
-  ,
-  [, b1, cos], // извлекаем второй объект и 'zzz' из вложенного массива
-  ...nos // остальные элементы ('no-1', 'no-2') в массив nos
-] = storage;
-
-console.log(nos); // [ 'no-1', 'no-2' ]
-console.log(cos); // [ 'zzz' ]
-console.log(b1); // { first: 'castfore', child: null }
+console.log(child); // null
+console.log(otherChilds); // { child2: {}, child3: 'child3' }
+console.log(nick); // name
+console.log(nicknames); // [ 'n1', 'n2', { n: 'n', b: 'b' } ]
+console.log(nicknames1); // nn
+console.log(otherNicks); // [ 'vv', 'gg' ]
+console.log(nick1); // childName
+console.log(child1); // undeined
