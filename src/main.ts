@@ -707,21 +707,27 @@
 // const maxBalance = calculateBalanceForUser(max); // Его история операция: -3 + 9 - 18 + 3
 // console.log(maxBalance); // -9
 
-const values = [
-  [1, 100],
-  [2, 200],
-  [3, 300],
-  [1, 2],
-  [3, 400],
-  [4, 500],
-  [1, 99],
-];
+// const values = [
+//   [1, 100],
+//   [2, 200],
+//   [3, 300],
+//   [1, 2],
+//   [3, 400],
+//   [4, 500],
+//   [1, 99],
+// ];
+//
+// const result = values.reduce((acc, [key, value]) => {
+//   acc[key] = acc[key] || { count: 0, sum: 0 }; // Если ключа нет — создаём
+//   acc[key].count++; // Увеличиваем счётчик
+//   acc[key].sum += value; // Добавляем значение
+//   return acc;
+// }, {});
+//
+// console.log(result);
 
-const result = values.reduce((acc, [key, value]) => {
-  acc[key] = acc[key] || { count: 0, sum: 0 }; // Если ключа нет — создаём
-  acc[key].count++; // Увеличиваем счётчик
-  acc[key].sum += value; // Добавляем значение
-  return acc;
-}, {});
-
-console.log(result);
+function findLongestString(arr) {
+  return arr.reduce((longest, current) => (current.length > longest.length ? current : longest), '');
+} // На каждом шаге сравниваем длину текущей строки (current) с самой длинной найденной на данный момент (longest).
+const strings = ['Москва', 'Москва слезам не верит', 'Санкт-Петербург', 'Ока'];
+console.log(findLongestString(strings));
