@@ -657,7 +657,6 @@
   }
   return acc;
 }, []).join(''); //После обработки всех символов массив объединяется обратно в строку с помощью
-
 };
 const result = deduplicate('uuunbbeliaaaaveeabbbblllllee');
 console.log(result);
