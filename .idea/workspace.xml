@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Задание Исправьте код. Объекты">
+    <list default="true" id="494a085e-1164-437c-9c57-43a1a6f071bf" name="Changes" comment="Задание reduce. Дедубликация">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
     </list>
@@ -103,7 +103,7 @@
       <workItem from="1748455149867" duration="3611000" />
       <workItem from="1748802203711" duration="3006000" />
       <workItem from="1748888096142" duration="2767000" />
-      <workItem from="1749995593568" duration="636000" />
+      <workItem from="1749995593568" duration="1485000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлено задание Елочка и Вывод матрицы">
       <option name="closed" value="true" />
@@ -481,7 +481,23 @@
       <option name="project" value="LOCAL" />
       <updated>1748805959931</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Задание reduce. Дедубликация">
+      <option name="closed" value="true" />
+      <created>1749996472582</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1749996472582</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Задание reduce. Дедубликация">
+      <option name="closed" value="true" />
+      <created>1749996513365</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1749996513365</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -501,7 +517,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Задание Гирлянда" />
     <MESSAGE value="Задание Строковый литерал" />
     <MESSAGE value="Задание Числовой литерал" />
     <MESSAGE value="Задание ЧиОбъект" />
@@ -526,7 +541,8 @@
     <MESSAGE value="Задание Merge с очередностью" />
     <MESSAGE value="Задание Исправьте код. Массивы" />
     <MESSAGE value="Задание Исправьте код. Объекты" />
-    <option name="LAST_COMMIT_MESSAGE" value="Задание Исправьте код. Объекты" />
+    <MESSAGE value="Задание reduce. Дедубликация" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задание reduce. Дедубликация" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

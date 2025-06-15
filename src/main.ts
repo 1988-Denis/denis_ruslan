@@ -651,12 +651,58 @@
 // console.log(nick1); // childName
 // console.log(child1); // undeined
 
- const str.split('').reduce((acc, char))=> { // преобразуем строку в массив символов.
-  if (acc[acc.length - 1] !== char) { // На каждой итерации проверяется, отличается ли текущий символ от последнего добавленного в аккумулятор
-    acc.push(char);
-  }
-  return acc;
-}, []).join(''); //После обработки всех символов массив объединяется обратно в строку с помощью
+//  const str.split('').reduce((acc, char))=> { // преобразуем строку в массив символов.
+//   if (acc[acc.length - 1] !== char) { // На каждой итерации проверяется, отличается ли текущий символ от последнего добавленного в аккумулятор
+//     acc.push(char);
+//   }
+//   return acc;
+// }, []).join(''); //После обработки всех символов массив объединяется обратно в строку с помощью
+// };
+// const result = deduplicate('uuunbbeliaaaaveeabbbblllllee');
+// console.log(result);
+
+type Transaction = {
+  id: number;
+  diff: number;
 };
-const result = deduplicate('uuunbbeliaaaaveeabbbblllllee');
-console.log(result);
+
+type User = {
+  id: number;
+  name: string;
+  startBalance: number;
+  transactions: Transaction[];
+};
+
+const alexander: User = {
+  id: 37,
+  name: 'AleX',
+  startBalance: 0,
+  transactions: [
+    { id: 8, diff: 100 },
+    { id: 30, diff: -50 },
+    { id: 23, diff: 250 },
+  ],
+};
+
+const max: User = {
+  id: 40,
+  name: 'MaX',
+  startBalance: -3,
+  transactions: [
+    { id: 4, diff: 9 },
+    { id: 5, diff: -18 },
+    { id: 5, diff: 3 },
+  ],
+};
+
+const calculateBalanceForUser = (user: User): number => {
+  return user.transactions.reduce((sum, transaction) => {
+    return sum + transaction.diff;
+  }, user.startBalance);
+};
+
+const alexanderBalance = calculateBalanceForUser(alexander); // Его история операция: 0 + 100 - 50 + 250
+console.log(alexanderBalance); // 300
+
+const maxBalance = calculateBalanceForUser(max); // Его история операция: -3 + 9 - 18 + 3
+console.log(maxBalance); // -9
