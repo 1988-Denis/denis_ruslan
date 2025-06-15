@@ -660,49 +660,68 @@
 // };
 // const result = deduplicate('uuunbbeliaaaaveeabbbblllllee');
 // console.log(result);
+//
+// type Transaction = {
+//   id: number;
+//   diff: number;
+// };
+//
+// type User = {
+//   id: number;
+//   name: string;
+//   startBalance: number;
+//   transactions: Transaction[];
+// };
+//
+// const alexander: User = {
+//   id: 37,
+//   name: 'AleX',
+//   startBalance: 0,
+//   transactions: [
+//     { id: 8, diff: 100 },
+//     { id: 30, diff: -50 },
+//     { id: 23, diff: 250 },
+//   ],
+// };
+//
+// const max: User = {
+//   id: 40,
+//   name: 'MaX',
+//   startBalance: -3,
+//   transactions: [
+//     { id: 4, diff: 9 },
+//     { id: 5, diff: -18 },
+//     { id: 5, diff: 3 },
+//   ],
+// };
+//
+// const calculateBalanceForUser = (user: User): number => {
+//   return user.transactions.reduce((sum, transaction) => {
+//     return sum + transaction.diff;
+//   }, user.startBalance);
+// };
+//
+// const alexanderBalance = calculateBalanceForUser(alexander); // Его история операция: 0 + 100 - 50 + 250
+// console.log(alexanderBalance); // 300
+//
+// const maxBalance = calculateBalanceForUser(max); // Его история операция: -3 + 9 - 18 + 3
+// console.log(maxBalance); // -9
 
-type Transaction = {
-  id: number;
-  diff: number;
-};
+const values = [
+  [1, 100],
+  [2, 200],
+  [3, 300],
+  [1, 2],
+  [3, 400],
+  [4, 500],
+  [1, 99],
+];
 
-type User = {
-  id: number;
-  name: string;
-  startBalance: number;
-  transactions: Transaction[];
-};
+const result = values.reduce((acc, [key, value]) => {
+  acc[key] = acc[key] || { count: 0, sum: 0 }; // Если ключа нет — создаём
+  acc[key].count++; // Увеличиваем счётчик
+  acc[key].sum += value; // Добавляем значение
+  return acc;
+}, {});
 
-const alexander: User = {
-  id: 37,
-  name: 'AleX',
-  startBalance: 0,
-  transactions: [
-    { id: 8, diff: 100 },
-    { id: 30, diff: -50 },
-    { id: 23, diff: 250 },
-  ],
-};
-
-const max: User = {
-  id: 40,
-  name: 'MaX',
-  startBalance: -3,
-  transactions: [
-    { id: 4, diff: 9 },
-    { id: 5, diff: -18 },
-    { id: 5, diff: 3 },
-  ],
-};
-
-const calculateBalanceForUser = (user: User): number => {
-  return user.transactions.reduce((sum, transaction) => {
-    return sum + transaction.diff;
-  }, user.startBalance);
-};
-
-const alexanderBalance = calculateBalanceForUser(alexander); // Его история операция: 0 + 100 - 50 + 250
-console.log(alexanderBalance); // 300
-
-const maxBalance = calculateBalanceForUser(max); // Его история операция: -3 + 9 - 18 + 3
-console.log(maxBalance); // -9
+console.log(result);
